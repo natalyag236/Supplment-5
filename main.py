@@ -62,5 +62,8 @@ def test_integer_range():
                 integer_range(number)
         else:
             assert integer_range(number) == number
+def test_divisible_numbers():
+    assert divisible_numbers(3) == [3, 6, 9]
+
             
 
