@@ -62,6 +62,12 @@ def test_integer_range():
                 integer_range(number)
         else:
             assert integer_range(number) == number
+
+def divisible_numbers(number):
+    if number == 0:
+        raise ValueError ("Cannot divide by zero")
+    return [ i for i in range (1 ,11) if i % number == 0]
+
 def test_divisible_numbers():
     assert divisible_numbers(3) == [3, 6, 9]
 
