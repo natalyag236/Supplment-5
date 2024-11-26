@@ -1,4 +1,5 @@
 import math
+import random
 def calculate_sqaure_root(number):
     """Calculates the sqaure root of a given number
 
@@ -17,3 +18,20 @@ def calculate_sqaure_root(number):
 
 def test_calculate_sqaure_root():
     assert calculate_sqaure_root(9) == 3
+def test_integer_range():
+    for _ in range(100):
+        number = random.randint(1,100)
+
+        if number % 2 !=0:
+            number *=2
+        if number % 3 == 0:
+            number //= 3
+        if number % 4 == 0:
+            number *= 4
+        if number > 4:
+            with pytest.raises(ValueError):
+                integer_range(number)
+        else:
+            assert integer_range(number) == number
+            
+
