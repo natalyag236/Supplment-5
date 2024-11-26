@@ -64,6 +64,18 @@ def test_integer_range():
             assert integer_range(number) == number
 
 def divisible_numbers(number):
+    """Returns a list of numbers betwenn 1 an 10 that are divisible by given number
+
+    Args:
+        number (int): The divisor used to find divisible numbers between 1 and 10.
+
+
+    Raises:
+        ValueError:  If the input number is zero (division by zero is not allowed).
+
+    Returns:
+        lists: A list of integers between 1 and 10 that are divisible by the input number.
+    """
     if number == 0:
         raise ValueError ("Cannot divide by zero")
     return [ i for i in range (1 ,11) if i % number == 0]
