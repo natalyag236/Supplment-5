@@ -21,6 +21,18 @@ def test_calculate_sqaure_root():
     assert calculate_sqaure_root(9) == 3
 
 def integer_range(number):
+    """ This function takes an integer as input and applies a series of transformations based on specific conditions:
+
+
+    Args:
+        number (int): The input integer to be manipulated.
+
+    Raises:
+        ValueError: If the transformed number exceeds 4 after the operations.
+
+    Returns:
+        int: The transformed number, unless it exceeds 4, in which case a ValueError is raised.
+    """
     if number % 2 != 0: 
         number *= 2
     
